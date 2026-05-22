@@ -1,0 +1,18 @@
+import fs from "fs";
+
+const logs = [
+  "2024-03-15T14:23:01Z 192.168.1.42 GET /api/users 200 142ms",
+  "2024/03/15 14:23:01 10.0.0.7 POST /api/login 401 89ms",
+  "1710512581 127.0.0.1 GET /products - 120msggg",
+  '{"timestamp":"2024-03-15T14:23:01Z","method":"GET","path":"/api/test","status":500,"responseTime":"220ms"}',
+  "",
+  "",
+];
+
+if (!fs.existsSync("logs")) {
+  fs.mkdirSync("logs");
+}
+
+fs.writeFileSync("logs/sample.log", logs.join("\n"));
+
+console.log("sample.log generated successfully");
