@@ -23,7 +23,7 @@ export default async function analyzer(data){
     responseTimes[key].push(log.responseTime);
   }
 
-  console.log("\n LOG ANALYSIS REPORT:\n");
+  console.log("\nLOG ANALYSIS REPORT:\n");
 
   console.log(`Total Lines: ${totalLines}`);
   console.log(`Valid Logs: ${logs.length}`);
@@ -38,7 +38,7 @@ export default async function analyzer(data){
       console.log(`${endpoint} : ${count}`);
     });
 
-  console.log("\nEndpoint Errors:\n");
+  console.log("\nEndpoints having Errors:\n");
    Object.entries(errorCount).forEach(([endpoint, count]) => {
     console.log(`${endpoint} : ${count}`);
   });
