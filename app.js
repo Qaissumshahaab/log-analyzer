@@ -1,4 +1,5 @@
 import parser from "./parser.js";
+import analyzer from "./analyzer.js";
 
 
 
@@ -15,7 +16,7 @@ else{
 async function main() {
     try {
         const parsinglogs = await parser(filepath);
-        
+        await analyzer(parsinglogs);
     }
      catch (error) {
         console.error("Error processing log file:", error);
